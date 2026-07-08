@@ -36,6 +36,12 @@ async function fetchCharacters() {
     cardContainer.textContent = "No data to display";
   } else {
     const characters = data.results;
+    
+    //get max pages data
+    maxPage = data.info.pages;
+
+    //call function to update pagination info 
+    NavPagination(pagination, page, maxPage)
 
     cardContainer.innerHTML = "";
 
@@ -59,18 +65,11 @@ async function fetchCharacters() {
   }
 }
 
-// create variable that captures card creation
-const createCard = createCharacterCard();
-
-// append card creation
-cardContainer.append(createCard);
-
 // call function for next button
 NavButton(nextButton, ()=>{
   if (page < maxPage){
     page++;
     fetchCharacters();
-    NavPagination();
   }
 });
 
@@ -79,6 +78,5 @@ NavButton(prevButton, ()=>{
   if (page > 1){
     page--;
     fetchCharacters();
-    NavPagination();
   }
 });

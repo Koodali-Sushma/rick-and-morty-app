@@ -1,3 +1,3 @@
 export function NavButton(button, onClickCallback){
-    button.addEventListener("click", onClickCallback);
+     button.addEventListener("click", onClickCallback);
 }
