@@ -10,14 +10,23 @@
 }
 
 :root {
-  --color-primary: rgb(51, 51, 51);
-  --color-secondary: #f6f6f6;
-  --font-family: system-ui;
+  --cosmic-dark: #343470; /* Deep space background */
+  --portal-green: #39ff14; /* Toxic neon green for accents & buttons */
+  --portal-glow: #00ff88; /* Secondary bright mint green */
+  --dimension-purple: hsl(
+    41,
+    96%,
+    53%
+  ); /* Vibrant neon purple for card elements */
+  --text-light: #f5f5f5; /* Crisp white for readable text */
+  --card-bg: #252542; /* Slightly lighter contrast for card backgrounds */
 }
 
 body {
-  font-family: var(--font-family);
-  color: var(--color-primary);
+  background-color: var(--cosmic-dark);
+  color: var(--text-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
   padding: 20px;
 }
 
@@ -29,4 +38,13 @@ main {
 
 .title {
   padding: 10px 0;
+}
+h1 {
+  color: var(--portal-green);
+  text-shadow:
+    0 0 10px rgba(57, 255, 20, 0.6),
+    0 0 20px rgba(57, 255, 20, 0.3);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
