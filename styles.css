@@ -14,7 +14,11 @@
   --color-bg-primary: #343470; /* Deep space background */
   --color-primary: #39ff14; /* Toxic neon green for accents & buttons */
   --color-primary-light: #00ff88; /* Secondary bright mint green */
-  --color-secondary: hsl(178, 30%, 23%); /* subtle teal for inactive buttons and borders */
+  --color-secondary: hsl(
+    178,
+    30%,
+    23%
+  ); /* subtle teal for inactive buttons and borders */
   --text-light: #f5f5f5; /* Crisp white for readable text */
   --color-bg-secondary: #252542; /* Slightly lighter contrast for card backgrounds */
 }
@@ -64,6 +68,16 @@ h1 {
   margin-top: 2.5rem;
 }
 
+/* Target any navigation button when it gets the disabled state */
+.button:disabled {
+  background-color: #333344; /* Dark grayed-out look */
+  color: #777788; /* Faded text */
+  border-color: #444455;
+  cursor: not-allowed; /* Shows a 🚫 circle cursor on hover */
+  pointer-events: none; /* Completely blocks hover transformations or clicks */
+  box-shadow: none; /* Removes any active neon glowing effects */
+}
+
 @media (min-width: 768px) {
   .desktop {
     display: flex;
@@ -71,5 +85,4 @@ h1 {
   .mobile {
     display: none;
   }
-
 }
