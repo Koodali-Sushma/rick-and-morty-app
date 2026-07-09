@@ -41,7 +41,7 @@ async function fetchCharacters() {
     maxPage = data.info.pages;
 
     //call function to update pagination info 
-    NavPagination(pagination, page, maxPage)
+    NavPagination(pagination, page, maxPage);
 
     cardContainer.innerHTML = "";
 

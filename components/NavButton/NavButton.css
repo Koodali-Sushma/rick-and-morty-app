@@ -1,7 +1,18 @@
 .button {
-  border: none;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-secondary);
+  border-radius: 0.5rem;
+  color: var(--text-light);
+  padding: 15px 50px;
+  font-size: 1.3rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .button:hover {
-  background-color: var(--color-secondary);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 0 20px rgba(57, 255, 100, 2.0);
+  cursor: pointer;
+  transform: scale(1.03);
 }
