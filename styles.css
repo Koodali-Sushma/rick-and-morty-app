@@ -2,6 +2,7 @@
 @import "components/SearchBar/SearchBar.css";
 @import "components/NavButton/NavButton.css";
 @import "components/NavPagination/NavPagination.css";
+@import "components/ErrorHandling/ErrorButton.css";
 
 * {
   box-sizing: border-box;
