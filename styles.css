@@ -39,6 +39,7 @@ main {
 .title {
   padding: 10px 0;
 }
+
 h1 {
   color: var(--portal-green);
   text-shadow:

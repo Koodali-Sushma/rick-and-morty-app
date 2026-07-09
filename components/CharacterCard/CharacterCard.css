@@ -15,11 +15,13 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
   border-color: var(--portal-green);
   box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
+
 .card__info {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -28,22 +30,30 @@
 
 .card__content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   margin: 8px 0;
 
   padding-bottom: 4px;
   font-size: 0.95rem;
 }
+
 .card__content h2 {
-  margin-top: 0;
+  margin-top: 1.4rem;
   color: var(--portal-green);
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .card__info-description {
-  text-align: center;
+  text-align: right;
   color: #a0a0cc;
 }
+
+.card__info-description, .card__info-title {
+  margin: 0.2rem 0;
+}
+
 .card img {
   width: 100%;
   height: auto;
