@@ -1,16 +1,19 @@
 .search-bar-container {
-  width: 300px;
+  width: 30rem;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
-  background: #2d2d44;
-  border: 2px solid var(--portal-glow);
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-bg-secondary);
   border-radius: 8px;
   padding: 5px 15px;
   box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
   color: white;
+  animation-name: pulseGlowSearch;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 .search-bar__input {
@@ -27,6 +30,20 @@
   border: none;
   background-color: transparent;
 }
+
+@keyframes pulseGlowSearch {
+  0% {
+    border-color: var(--color-bg-secondary);
+  }
+
+  50%{
+    border-color: var(--color-primary);
+  }
+  100%{
+    border-color: var(--color-bg-secondary);
+  }
+}
+
 
 .search-bar__input:focus {
   outline: none;

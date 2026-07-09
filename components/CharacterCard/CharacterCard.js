@@ -25,6 +25,7 @@ export function createCharacterCard(character) {
                 </dl>
             </div>
     `;
+    
   // return created item
   return listItem;
 }
