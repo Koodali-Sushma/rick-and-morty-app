@@ -74,6 +74,10 @@ async function fetchCharacters() {
     //Clear the page so the broken UI layout disappears
     cardContainer.innerHTML = "";
 
+    //DISABLE BUTTONS: Freeze the navigation buttons instantly
+    prevButton.disabled = true;
+    nextButton.disabled = true;
+
     //Create the dynamic error button component
     const retryButton = ErrorButton(() => {
       // Save the current page number before wiping the browser memory
