@@ -12,7 +12,7 @@
 
 .button:hover {
   border-color: var(--color-primary-light);
-  box-shadow: 0 0 20px rgba(57, 255, 100, 2.0);
+  box-shadow: 0 0 20px rgba(57, 255, 100, 1.0);
   cursor: pointer;
   transform: scale(1.03);
 }
