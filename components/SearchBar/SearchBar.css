@@ -1,4 +1,5 @@
 .search-bar-container {
+  grid-area: search;
   width: 30rem;
 }
 

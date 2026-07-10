@@ -19,8 +19,16 @@
   --color-bg-secondary: #252542; /* Slightly lighter contrast for card backgrounds */
 }
 
-body {
-  background-color: var(--color-bg-primary);
+@font-face {
+  font-family: rick-and-morty-font; /* set name */
+  src: url(/web-challenges/recap-project-3_rick-and-morty-app/assets/get_schwifty.ttf); /* url of the font */
+}
+
+
+
+body {   
+  background: var(--color-bg-secondary);
+  background: radial-gradient(at right bottom, var(--color-bg-secondary), var(--color-bg-primary));
   color: var(--text-light);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -42,34 +50,30 @@ h1 {
   text-shadow:
     0 0 10px rgba(57, 255, 20, 0.6),
     0 0 20px rgba(57, 255, 20, 0.3);
-  font-size: 3.5rem;
+  font-family: rick-and-morty-font;
+  font-size: 4.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.desktop {
-  display: none;
-}
-
-.mobile {
-  display: flex;
-  margin-top: 2rem;
-  justify-content: center;
-}
-
-.search-bar-nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2.5rem;
+.app-layout {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+  "search"
+  "cards"
+  "nav";
+  margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
-  .desktop {
-    display: flex;
-  }
-  .mobile {
-    display: none;
+  
+  .app-layout {
+    grid-template-columns: 1fr auto;
+
+    grid-template-areas:
+    "search nav"
+    "cards cards";
   }
 
 }

@@ -4,6 +4,7 @@
   gap: 25px;
   margin-top: 30px;
   place-content: center;
+  grid-area: cards;
 }
 .card {
   background-color: var(--color-bg-secondary);
@@ -24,7 +25,7 @@
 
   }
   50%{
-    box-shadow: 0 0 20px rgba(57, 255, 100, 3.0);
+    box-shadow: 0 0 20px rgba(57, 255, 100, 1.0);
     border-color: var(--color-primary);
 
   }
@@ -38,8 +39,7 @@
   animation-name: pulseGlow;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
-  transform: translateY(-5px);
-  transform: scale(1.03);
+  transform: translateY(-5px) scale(1.03);
   cursor: pointer;
 }
 
