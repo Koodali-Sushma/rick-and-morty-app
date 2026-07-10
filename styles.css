@@ -2,6 +2,7 @@
 @import "components/SearchBar/SearchBar.css";
 @import "components/NavButton/NavButton.css";
 @import "components/NavPagination/NavPagination.css";
+@import "components/ErrorHandling/ErrorButton.css";
 
 * {
   box-sizing: border-box;
@@ -10,14 +11,23 @@
 }
 
 :root {
-  --color-primary: rgb(51, 51, 51);
-  --color-secondary: #f6f6f6;
-  --font-family: system-ui;
+  --color-bg-primary: #343470; /* Deep space background */
+  --color-primary: #39ff14; /* Toxic neon green for accents & buttons */
+  --color-primary-light: #00ff88; /* Secondary bright mint green */
+  --color-secondary: hsl(
+    178,
+    30%,
+    23%
+  ); /* subtle teal for inactive buttons and borders */
+  --text-light: #f5f5f5; /* Crisp white for readable text */
+  --color-bg-secondary: #252542; /* Slightly lighter contrast for card backgrounds */
 }
 
 body {
-  font-family: var(--font-family);
-  color: var(--color-primary);
+  background-color: var(--color-bg-primary);
+  color: var(--text-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
   padding: 20px;
 }
 
@@ -29,4 +39,50 @@ main {
 
 .title {
   padding: 10px 0;
+}
+
+h1 {
+  color: var(--color-primary);
+  text-shadow:
+    0 0 10px rgba(57, 255, 20, 0.6),
+    0 0 20px rgba(57, 255, 20, 0.3);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.search-bar-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+/* Target any navigation button when it gets the disabled state */
+.button:disabled {
+  background-color: #333344; /* Dark grayed-out look */
+  color: #777788; /* Faded text */
+  border-color: #444455;
+  cursor: not-allowed; /* Shows a 🚫 circle cursor on hover */
+  pointer-events: none; /* Completely blocks hover transformations or clicks */
+  box-shadow: none; /* Removes any active neon glowing effects */
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
 }
